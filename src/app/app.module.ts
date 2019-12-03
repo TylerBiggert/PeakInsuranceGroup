@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ProvidersComponent } from './providers/providers.component';
 import { ProvidersService } from './providers.service';
+import { PeakHeaderComponent } from './peak-header/peak-header.component';
 
 @NgModule({
   declarations: [
 	AppComponent,
-	ProvidersComponent //registers component in this module
+	ProvidersComponent,
+	PeakHeaderComponent //registers component in this module
   ],
   imports: [
     BrowserModule
