@@ -1,6 +1,16 @@
-<div>
-	<h2>{{ title }}</h2>
-	<ul>
-		<li *ngFor="let provider of providersList">{{ provider }}</li> <!-- *ngFor iterates over providerList field array in component.ts -->
-	</ul>
+<div class="m-5 row">
+	<div class="col">
+		<h2 class="mt-5">{{ title }}</h2>
+		<ul>
+			<!--*ngFor iterates over providerList field array in component.ts, and pipe to format text-->
+			<li *ngFor="let provider of providersList">{{ provider | uppercase}}</li>
+		</ul>
+	</div>
+	<div class="col-lg-5">
+			<p> This page was routed to by using the routerLink directive in the header component. You can use routerLink instead of href property to navigate pages. The href property will serve all the files so the user will have to redownload them, whereas routerLink only changes the component view.</p>
+			<p> The title is displayed using interpolation. There is a field named "title" in the component that passes the value into the template, and the text is rendered wherever {{ "{{ title }\}" }} is placed.</p>
+			<p> The provider names are retrieved from a providers service. This service returns the list of provider names as an array. The providers constructor creates an instance of our providers service with dependency injection. The *ngFor directive in the template iterates over each provider name and renders a list item. The pipe formats the name into all uppercase characters. </p>
+		</div>
+	<div class="col">
+	</div>
 </div>

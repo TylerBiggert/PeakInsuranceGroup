@@ -2,17 +2,17 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	
 	<!--logo and name-->
-	<a class="navbar-brand" href="#"><img src="assets\images\pacMan.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">Peak Insurance</a>
+	<a class="navbar-brand" routerLink=""><img src="assets\images\pacMan.png" width="30" height="30" class="d-inline-block align-top mr-1" alt="">Peak Insurance</a><!--routerLink directive prevents page from downloading ALL resources-->
 
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 	<span class="navbar-toggler-icon"></span>
 	</button>
+	<div class="collapse navbar-collapse">
+		<ul class="navbar-nav mr-auto">
+			<li class="navbar-item p-3"><a routerLink="/providers">Providers</a></li><!--routerLink directive prevents page from downloading ALL resources-->
+		</ul>
+	</div>
 	
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<!--
-		<div class="navbar-nav">
-			<button class="btn" (click)="ShowProviders($event)">Providers</button>
-		</div>
-		-->
 	</div>
 </nav>
